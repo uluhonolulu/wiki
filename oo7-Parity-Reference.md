@@ -50,9 +50,7 @@ A number of standard ABIs are provided as part of `oo7-parity`, useful for const
 - `RegistryABI`: The Parity general registry contract.
 - `GitHubHintABI`: The Parity GitHubHint contract.
 - `OperationsABI`: The Parity general operations contract.
-- `BadgeRegABI`: The Parity badge registry contract.
 - `TokenRegABI`: The Parity token registry contract.
-- `BadgeABI`: The Parity standard badge contract.
 - `TokenABI`: The ERC-20 standard token contract.
 
 ### `bonds`
@@ -187,12 +185,9 @@ Items that return `Array`s or `Object`s may be dereferenced directly, e.g. `bond
 - `registry => Contract` [parity]: The root Parity name registry contract.
 - `githubhint => Contract` [parity]: The primary URL hinting contract.
 - `operations => Contract` [parity]: The primary operations contract.
-- `badgereg => Contract` [parity]: The root Parity badge registry contract.
 - `tokenreg => Contract` [parity]: The root Parity token registry contract.
 
 #### Composite Bonds
-- `badges => [BadgeInfo]` [parity]: Return the array containing information on all registered badges.
-- `badgesOf(Address) => [BadgeInfo]` [parity]: Return the information on all badges assigned to a particular identity.
 - `namesOf(Address) => NamesInfo` [parity]: Return an object detailing all names given to a particular address.
 - `names => [String]` [parity]: Return the array containing all reversible names registered in the Parity registry.
 
@@ -574,19 +569,6 @@ This is the second of two parameters. `options` is an object with three keys:
 - `fromBlock`: The block number before which no events shall be returned. Defaults to `0` if `undefined` or `null`.
 - `toBlock`: The block number after which no events shall be returned. Defaults to `pending` if `undefined` or `null`.
 - `limit`: The maximum amount of events to return. Defaults to `10` if `undefined` or `null`.
-
-
-### `BadgeInfo`
-
-Information concerning a badge.
-
-#### Keys
-
-- `id: Number`: A numeric identifier of this badge. Unique over all registered badges.
-- `name: String`: A textual name for this badge. Not guarantees to be particularly presentable.
-- `caption: String`: A presentable string to describe this badge.
-- `img: Hash`: The hash of a representative image of this badge. Generally usable as an icon.
-- `badge: Contract`: The badge contract itself.
 
 ### `NamesInfo`
 
