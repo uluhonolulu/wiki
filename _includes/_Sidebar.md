@@ -34,7 +34,6 @@
 - [ERC20 Tokens](Tokens)
   - [Token Deployment](Token-Deployment)
   - [Token Registry](Token-Registry)
-- [Badge Registry](Badge-Registry)
 - [Smart Contracts](Smart-Contracts)
 - [Transaction Queue](Transactions-Queue)
 - [Dapp Tutorial](Dapp-Tutorial)
